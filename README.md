@@ -22,7 +22,7 @@ This module is intended for working with address-related data and provides utili
     // returns all baranggay from the given municipality_name
     barangay('municipality_name')
 
-    //return false if the given 'region_name', 'province_name', 'municipality_name', and 'barangay_name' doesn't exist on 'address_api'
+    //return false if the given 'region_name', 'province_name', 'municipality_name', and 'barangay_name' doesn't exist on 'address_api', otherwise returns true
     verify('region_name', 'province_name', 'municipality_name', 'barangay_name')
 
 ### Region
