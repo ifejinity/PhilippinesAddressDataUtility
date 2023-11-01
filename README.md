@@ -10,11 +10,14 @@ This module is intended for working with address-related data and provides utili
 
 
 ### Available methods
-
-    region() //returns all region
-    province('region_name') //returns all provinces from the given region_name
-    municipality('province_name') //returns all municipality from the given province_name 
-    barangay('municipality_name') // returns all baranggay from the given municipality_name
+    //returns all region
+    region()
+    //returns all provinces from the given region_name
+    province('region_name') 
+    //returns all municipality from the given province_name 
+    municipality('province_name')
+    // returns all baranggay from the given municipality_name
+    barangay('municipality_name')
 
 ### Region
 
