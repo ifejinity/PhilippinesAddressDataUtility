@@ -22,6 +22,9 @@ This module is intended for working with address-related data and provides utili
     // returns all baranggay from the given municipality_name
     barangay('municipality_name')
 
+    //return false if the given 'region_name', 'province_name', 'municipality_name', and 'barangay_name' doesn't exist on 'address_api'
+    verify('region_name', 'province_name', 'municipality_name', 'barangay_name')
+
 ### Region
 
 Show all regions in the philippines
