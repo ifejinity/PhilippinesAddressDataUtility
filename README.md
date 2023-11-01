@@ -3,9 +3,14 @@ This module is intended for working with address-related data and provides utili
 
 # How to use
 
+### Available methods
+
+    region()
+    province()
+
 ### Region
 
-Explain what these tests test and why
+Show all regions in the philippines
 
     Give an example
 
