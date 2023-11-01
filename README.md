@@ -3,7 +3,7 @@ This module is intended for working with address-related data and provides utili
 
 # How to use
 
-### Import to your projectr
+### Import to your project
 
     import Address from 'your_address_api_path'
     Address.region() //returns all the region from the philippines
@@ -11,8 +11,10 @@ This module is intended for working with address-related data and provides utili
 
 ### Available methods
 
-    region()
-    province()
+    region() //returns all region
+    province('region_name') //returns all provinces from the given region_name
+    municipality('province_name') //returns all municipality from the given province_name 
+    barangay('municipality_name') // returns all baranggay from the given municipality_name
 
 ### Region
 
