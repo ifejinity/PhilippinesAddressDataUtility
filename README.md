@@ -6,21 +6,54 @@ This module is intended for working with address-related data and provides utili
 ### Import to your project
 
     import Address from 'your_address_api_path'
-    Address.region() //returns all the region from the philippines
-
+    const address = new Address();
+    
+    // Fetch address data
+    await address.getAddress();
+    
+    // Retrieve all regions
+    const regions = address.regions();
+    console.log(regions);
+    
+    // Set a region and retrieve its provinces
+    address.setRegion('RegionName');
+    const provinces = address.provinces();
+    console.log(provinces);
+    
+    // Set a province and retrieve its municipalities
+    address.setProvince('ProvinceName');
+    const cities = address.cities();
+    console.log(cities);
 
 ### Available methods
-    //returns all region
-    region()
+    getAddress()
+    Fetches the address data from the /Api/Address.json endpoint and stores it in the class instance.
     
-    //returns all provinces from the given region_name
-    province('region_name') 
+    Returns: Promise<this>
+    regions()
+    Retrieves all regions available in the address data.
     
-    //returns all municipality from the given province_name 
-    municipality('province_name')
+    Returns: string[]
+    provinces()
+    Retrieves all provinces for the currently set region.
     
-    // returns all baranggay from the given municipality_name
-    barangay('municipality_name')
-
-    //return false if the given 'region_name', 'province_name', 'municipality_name', and 'barangay_name' doesn't exist on 'address_api', otherwise returns true
-    verify('region_name', 'province_name', 'municipality_name', 'barangay_name')
+    Returns: object
+    cities()
+    Retrieves all municipalities for the currently set region and province.
+    
+    Returns: object
+    setRegion(region: string)
+    Sets the current region.
+    
+    Parameters:
+    
+    region (string): The name of the region to set.
+    Returns: this
+    
+    setProvince(province: string)
+    Sets the current province.
+    
+    Parameters:
+    
+    province (string): The name of the province to set.
+    Returns: this
